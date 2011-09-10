@@ -110,10 +110,10 @@ This is because I know of no data indicating that the features are
 worth the time they would take to implement, and they could be difficult
 to do properly because they involve inspecting the User Agent string.
 
-    * Sending the header only to IE.
-    * Requiring all IE users to have GCF installed.
-    * Requiring only IE users matching the condition of activation to
-      have GCF installed.
+* Sending the header only to IE.
+* Requiring all IE users to have GCF installed.
+* Requiring only IE users matching the condition of activation to
+  have GCF installed.
 
 I am not opposed to these features, I just don’t feel like implementing
 them right now. Feel free to do it yourself or try to convince me to.

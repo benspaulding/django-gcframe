@@ -1,5 +1,7 @@
 .. _decorators:
 .. module:: gcframe.decorators
+   :synopsis: Decorators that alter the ``X-UA-Compatible`` header on a
+              per-view basis.
 
 Decorators
 ==========
@@ -8,19 +10,20 @@ Overview
 --------
 
 These decorators allow you to apply or remove the ``X-UA-Compatible``
-HTTP header from individual views.
+HTTP header on individual views.
+
+Available Decorators
+--------------------
+
+
+.. _gcframe:
 
 gcframe
--------
+~~~~~~~
 
-:func:`gcframe(compat_mode='Edge', act_method='1')`
-
-.. _function:: gcframe(compat_mode='Edge', act_method='1')
-    :module: gcframe.decorators
-
-The ``@gcframe()`` decorator allows the ``X-UA-Compatible`` HTTP
-header to be added to individual views, rather than site-wide as the
-middleware does.
+This decorator applies the ``X-UA-Compatible`` HTTP header to
+individual views, rather than site-wide as
+:doc:`GoogleChromeFrameIEMiddleware <middleware>` does.
 
 ::
 
@@ -30,37 +33,36 @@ middleware does.
     def some_view(request):
         …
 
-.. _note:
+.. note::
 
-Note that the ``()`` are required on this decorator, even when no
-arguments are being passed.
+   The trailing ``()`` are required on this decorator, even when no
+   arguments are passed.
 
-Arguments
-~~~~~~~~~
+It accepts the key-word arguments ``compat_mode`` and ``act_method``.
+These arguments correspond to :ref:`GCF_IE_COMPATIBILITY_MODE`
+and :ref:`GCF_IE_ACTIVATION_METHOD`, respectively.
 
-This decorator can be passed two arguments. They correspond to
-configurable settings, and default to those settings when no arguments
-are passed. They are useful if you wish to set the ``X-UA-Compatible``
-HTTP header to something different than the default that is being used
-widely by this decorator on other views or by the middleware site-wide.
+Using these arguments is useful when you wish to set the
+``X-UA-Compatible`` HTTP header to something different than the
+default that is being used by this decorator on other views or by the
+middleware site-wide.
 
-compat_mode
-^^^^^^^^^^^
+::
 
-See the :ref:`GCF_IE_COMPATIBILITY_MODE` setting.
+    from gcframe.decorators import gcframe
 
-act_method
-^^^^^^^^^^
+    @gcframe(act_method='IE7')
+    def some_view(request):
+        …
 
-See the :ref:`GCF_IE_ACTIVATION_METHOD` setting.
 
+.. _gcframe_exempt:
 
 gcframe_exempt
---------------
+~~~~~~~~~~~~~~
 
-The ``@gcframe_exempt`` decorator instructs the
-:doc:`GoogleChromeFrameIEMiddleware <middleware>` to **not** set the
-``X-UA-Compatible`` HTTP header.
+This decorator instructs the :doc:`GoogleChromeFrameIEMiddleware
+<middleware>` to **not** set the ``X-UA-Compatible`` HTTP header.
 
 ::
 
@@ -70,5 +72,5 @@ The ``@gcframe_exempt`` decorator instructs the
     def some_view(request):
         …
 
-Obviously this will only do anything when the middleware is installed.
-But it is harmless if it’s not installed.
+Obviously this will only affect change when the middleware is installed.
+It is harmless if the middleware is not installed.

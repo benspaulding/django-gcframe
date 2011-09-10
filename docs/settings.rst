@@ -1,49 +1,50 @@
 .. _settings:
 .. module:: gcframe.settings
+   :synopsis: Configurable settings that affect the behavior of the
+              middleware and decorators.
 
-Configurable Settings
-=====================
+Settings
+========
 
 Overview
 --------
 
 There are a couple of configurable settings that define the content of
-the ``X-UA-Compatible`` HTTP header.
+the ``X-UA-Compatible`` HTTP response header. Realistically, virtually
+no one will need to modify these. But if you do, simply set a custom
+value for them in your :file:`settings.py`.
 
-Realistically, virtually no one will need to modify these. But if you
-do, here they are.
 
-
-.. _settings-list:
-
-List of Settings
-----------------
+Available Settings
+------------------
 
 .. _GCF_IE_COMPATIBILITY_MODE:
 
 GCF_IE_COMPATIBILITY_MODE
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Default: ``'Edge'`` (If :abbr:`GCF (Google Chrome Frame)` is not
-activated, use the highest compatibility mode available.)
+The default value is ``'Edge'``. This means that if :abbr:`GCF (Google
+Chrome Frame)` is not activated :abbr:`IE (Internet Explorer)` will use
+the highest compatibility mode available. Other values include:
 
-Other options include:
+* ``None``
+* ``'5'``
+* ``'6'``
+* ``'7'``
+* ``'EmulateIE7'``
+* ``'8'``
 
-    * ``None``
-    * ``'5'``
-    * ``'6'``
-    * ``'7'``
-    * ``'EmulateIE7'``
-    * ``'8'``
+A value of ``None``, will turn off compatibility mode changing. Other
+values correspond to various Internest Explorer browser modes.
+Virtually everyone will be best served by using the default value of
+``'Edge'``.
 
-Before using any of these options, please consult the `MSDN META Tags`_
-article. Be sure they do what you think they do. Virtually everyone will
-be best served by using the default ``'Edge'`` value.
+.. seealso::
 
-Note that the first option listed, ``None``, will turn off compatibility
-mode changing.
+   More information on compatibility modes can be found in the MSDN
+   article `META Tags and Locking in Future Compatibility`_.
 
-.. _MSDN META Tags: http://msdn.microsoft.com/library/cc817574.aspx
+.. _META Tags and Locking in Future Compatibility: http://msdn.microsoft.com/library/cc817574.aspx
 
 
 .. _GCF_IE_ACTIVATION_METHOD:
@@ -51,22 +52,21 @@ mode changing.
 GCF_IE_ACTIVATION_METHOD
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Default: ``'1'`` (Activate GCF on all version of Internet Explorer that
-have it installed.)
+Default value is ``'1'``. This means that all versions of IE with GCF
+installed will activate it. Other options include:
 
-Other options include:
+* ``'IE6'``
+* ``'IE7'``
+* ``'IE8'``
 
-    * ``IE6``
-    * ``IE7``
-    * ``IE8``
-
-These values activate GCF only on the named Internet Explorer version
-and older. Newer versions will behave according to the given
-:ref:`compatibility mode <GCF_IE_COMPATIBILITY_MODE>`.
-
-For further information, see the GCF `developer documentation`_.
-
+These values activate GCF only on the named IE version and older. Newer
+versions will behave according to the value of :ref:`GCF_IE_COMPATIBILITY_MODE`.
 Again, few people will need to change this setting. A value of ``'1'``
 will likely serve you best.
 
-.. _developer documentation: http://www.chromium.org/developers/how-tos/chrome-frame-getting-started
+.. seealso::
+
+   The `GCF developer documentation`_ has more information regarding
+   activation methods.
+
+.. _GCF developer documentation: http://www.chromium.org/developers/how-tos/chrome-frame-getting-started

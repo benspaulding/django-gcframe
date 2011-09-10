@@ -1,5 +1,6 @@
 .. _middleware:
 .. module:: gcframe.middleware
+   :synopsis: Middleware that adds the ``X-UA-Compatible`` header site-wide.
 
 Middleware
 ==========
@@ -10,14 +11,15 @@ Overview
 The ``GoogleChromeFrameIEMiddleware`` middleware adds an
 ``X-UA-Compatible`` HTTP header to the response of all views. When using
 default settings (which you should), this header activates
-:abbr:`GCF (Google Chrome Frame)` in all versions of Microsoft Internet
-Explorer that have it installed. Those that do not have GCF installed
-will instead use the highest `compatibility mode`_ available to them.
+:abbr:`GCF (Google Chrome Frame)` in all versions of Internet Explorer
+that have it installed. Those that do not have GCF installed will
+instead be directed to use the highest `compatibility mode`_ available
+to them.
 
-.. _note:
+.. tip::
 
-Views can be exempt from the header addition by using the
-``gcframe_exempt`` decorator.
+   Views can be exempt from the header addition by using the
+   :func:`gcframe_exempt` decorator.
 
 
 Installation
@@ -36,11 +38,8 @@ position is not necessary (to my knowledge), but putting in the middle
 will at least ensure that it’s not outside of other middleware that
 require being near the start or end.
 
-.. _note:
-
-For more information on middleware ordering, see the Django
-documentation’s `middleware reference`_ and `middleware topic`_.
+.. tip::
+   The content of the ``X-UA-Compatible`` header can be altered using by
+   overriding settings in :mod:`gcframe.settings`.
 
 .. _compatibility mode: http://msdn.microsoft.com/library/cc817574.aspx
-.. _middleware reference: https://docs.djangoproject.com/en/dev/ref/middleware/
-.. _middleware topic: https://docs.djangoproject.com/en/1.2/topics/http/middleware/#activating-middleware

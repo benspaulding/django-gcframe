@@ -1,6 +1,18 @@
-# TODO: Figure out if these tests are even necessary.
+"""Settings for running app tests when not part of another project."""
 
-# Test that settings can be imported without the DJANGO_SETTINGS_MODULE
-# environment variable set.
+# Requred by Django, though we don't actually use the database.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': ':memory:',
+    }
+}
 
-# Test that default values can be changed by the DJANGO_SETTINGS_MODULE.
+ROOT_URLCONF = 'gcframe.tests.urls'
+
+INSTALLED_APPS = (
+    'gcframe',
+)
+
+# Required for Django >= 1.4.
+SECRET_KEY = 'super-secret!'

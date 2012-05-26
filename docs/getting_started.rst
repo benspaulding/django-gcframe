@@ -59,6 +59,12 @@ directory somewhere on your Python path, or symlink to it from
 somewhere on your Python path; this is useful if you’re working from a
 Git checkout.
 
+To run tests::
+
+    django-admin.py test gcframe --settings="gcframe.tests.settings"
+
+For more information on tests see :doc:`tests`.
+
 You can then begin using the middleware and/or decorators in your
 Django project.
 
@@ -98,9 +104,6 @@ Bugs and feature requests can be submitted to the `GitHub issue
 tracker`_.
 
 .. _GitHub issue tracker: https://github.com/benspaulding/django-gcframe/issues/
-
-This package does not yet have a test suite, but one will be written in
-the near future.
 
 Features Not Yet Included
 ~~~~~~~~~~~~~~~~~~~~~~~~~

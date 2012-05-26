@@ -1,3 +1,6 @@
+# After any modifications to this file, be sure to check it with
+# http://lint.travis-ci.org/
+
 language: python
 python:
     - 2.7

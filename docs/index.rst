@@ -37,6 +37,7 @@ Contents
     middleware
     decorators
     settings
+    tests
 
 
 Indices, etc.

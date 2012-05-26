@@ -4,6 +4,12 @@
 Django Google Chrome Frame
 ==========================
 
+|Build status|_
+
+.. |Build status| image::
+   https://secure.travis-ci.org/benspaulding/django-gcframe.png
+.. _Build status: http://travis-ci.org/benspaulding/django-dcframe
+
 Overview
 --------
 

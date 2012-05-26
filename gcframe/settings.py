@@ -8,6 +8,8 @@ See the documentation for further details.
 
 """
 
+# TODO: Determine if we even need to account for a lack of settings module, and
+# remove this try/except if necessary.
 try:
     from django.conf import settings
     # Because settings are magical LazySettings objects, it can be

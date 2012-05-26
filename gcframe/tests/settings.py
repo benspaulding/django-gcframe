@@ -1,5 +1,4 @@
-
-# Test that default values do not change.
+# TODO: Figure out if these tests are even necessary.
 
 # Test that settings can be imported without the DJANGO_SETTINGS_MODULE
 # environment variable set.

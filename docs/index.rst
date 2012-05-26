@@ -17,7 +17,7 @@ Overview
 Chrome Frame.
 
 Specifically, the package provides configurable middleware and
-decorators for adding and removing the ``X-UA-Compatible`` HTTP haeder
+decorators for adding and removing the ``X-UA-Compatible`` HTTP header
 in view responses. Said header conditionally activates Google Chrome
 Frame when installed on Microsoft Internet Explorer, and conditionally
 enables a compatibility mode when :abbr:`GCF (Google Chrome Frame)` is

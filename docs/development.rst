@@ -5,6 +5,29 @@
 Development
 ===========
 
+Source Code
+-----------
+
+``gcframe`` source code is managed using Git, and can be found on GitHub_. Feel
+free to clone, fork, and contribute.
+
+.. _GitHub: https://github.com/benspaulding/django-gcframe/
+
+Documentation
+-------------
+
+The documentation is written in plain text, viewable practially anywhere. An
+HTML version of the docs can be found online at `Read the Docs`_. If you want
+to build a local version of these, you can install Sphinx_, and then from the
+``doc`` directory in this repository, run::
+
+    make html
+
+You will find the built docs in the ``docs/_build/html`` directory.
+
+.. _Read The Docs: http://readthedocs.org/docs/django-gcframe/
+.. _Sphinx: http://sphinx.pocoo.org/
+
 Tests
 -----
 
@@ -31,18 +54,3 @@ the root of the repository.
 .. note:: In order for ``gcframe`` tests to run in your project, you will need
           to add ``gcframe`` to your ``INSTALLED_APPS``. (Mentioned here because
           no other ``gcframe`` functionality requires this.)
-
-Documentation
--------------
-
-The documentation is written in plain text, viewable practially anywhere. An
-HTML version of the docs can be found online at `Read the Docs`_. If you want
-to build a local version of these, you can install Sphinx_, and then from the
-``doc`` directory in this repository, run::
-
-    make html
-
-You will find the built docs in the ``docs/_build/html`` directory.
-
-.. _Read The Docs: http://readthedocs.org/docs/django-gcframe/
-.. _Sphinx: http://sphinx.pocoo.org/

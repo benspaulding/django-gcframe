@@ -59,12 +59,6 @@ directory somewhere on your Python path, or symlink to it from
 somewhere on your Python path; this is useful if you’re working from a
 Git checkout.
 
-To run tests::
-
-    django-admin.py test gcframe --settings="gcframe.tests.settings"
-
-For more information on tests see :doc:`tests`.
-
 You can then begin using the middleware and/or decorators in your
 Django project.
 
@@ -131,3 +125,13 @@ this yourself, see the Chrome developer guide for `detecting and
 prompting to install`_.
 
 .. _detecting and prompting to install: http://www.chromium.org/developers/how-tos/chrome-frame-getting-started#TOC-Detecting-Google-Chrome-Frame-and-P
+
+Development
+-----------
+
+To run tests::
+
+    django-admin.py test gcframe --settings="gcframe.tests.settings"
+
+For more information on tests, and for building the documentation, please see
+:doc:`development`.

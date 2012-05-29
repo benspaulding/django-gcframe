@@ -4,7 +4,7 @@ import os
 
 from distutils.core import setup
 
-from gcframe import VERSION
+from gcframe import __version__
 
 
 def read(fname):
@@ -12,13 +12,13 @@ def read(fname):
 
 setup(
     name='django-gcframe',
-    version=VERSION,
+    version=__version__,
     description='Django middleware and decorators for working with Google Chrome Frame.',
     url='https://github.com/benspaulding/django-gcframe/',
     author='Ben Spaulding',
     author_email='ben@benspaulding.us',
     license='BSD',
-    download_url='https://github.com/benspaulding/django-gcframe/tarball/v%s' % VERSION,
+    download_url='https://github.com/benspaulding/django-gcframe/tarball/v%s' % __version__,
     long_description = read('README.rst'),
     packages = [
         'gcframe',

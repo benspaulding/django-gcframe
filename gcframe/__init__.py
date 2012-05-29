@@ -15,4 +15,4 @@ Refer to the documentation_ for further information.
 
 """
 
-VERSION = '0.9'
+__version__ = '0.9'

@@ -4,21 +4,31 @@ import os
 
 from distutils.core import setup
 
-from gcframe import __version__
 
+here = os.path.dirname(__file__)
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
+# Function borrowed from carljm.
+def get_version():
+    fh = open(os.path.join(here, "gcframe", "__init__.py"))
+    try:
+        for line in fh.readlines():
+            if line.startswith("__version__ ="):
+                return line.split("=")[1].strip().strip("'")
+    finally:
+        fh.close()
+
 setup(
     name='django-gcframe',
-    version=__version__,
+    version=get_version(),
     description='Django middleware and decorators for working with Google Chrome Frame.',
     url='https://github.com/benspaulding/django-gcframe/',
     author='Ben Spaulding',
     author_email='ben@benspaulding.us',
     license='BSD',
-    download_url='https://github.com/benspaulding/django-gcframe/tarball/v%s' % __version__,
+    download_url='https://github.com/benspaulding/django-gcframe/tarball/v%s' % get_version(),
     long_description = read('README.rst'),
     packages = [
         'gcframe',

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Settings that define behavior of the middleware and decorators.
 

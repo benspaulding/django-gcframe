@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Module required for Django to recognize ``gcframe`` as an app.
 

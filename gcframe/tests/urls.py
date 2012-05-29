@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """ Simple urls for use in testing the gcframe app. """
 
 from django.conf.urls.defaults import *

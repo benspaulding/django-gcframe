@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """ Simple views for use in testing the gcframe app. """
 
 from django.http import HttpResponse

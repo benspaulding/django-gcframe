@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Django utilities for working with Google Chrome Frame.
 

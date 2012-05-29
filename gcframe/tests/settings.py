@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """Settings for running app tests when not part of another project."""
 
 # Requred by Django, though we don't actually use the database.

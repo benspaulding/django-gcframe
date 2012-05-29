@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from gcframe.settings import IE_COMPATIBILITY_MODE, IE_ACTIVATION_METHOD
 
 

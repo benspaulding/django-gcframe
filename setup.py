@@ -7,8 +7,8 @@ from distutils.core import setup
 
 here = os.path.dirname(__file__)
 
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+def get_long_desc():
+    return open(os.path.join(here, 'README.rst')).read()
 
 # Function borrowed from carljm.
 def get_version():
@@ -29,7 +29,7 @@ setup(
     author_email='ben@benspaulding.us',
     license='BSD',
     download_url='https://github.com/benspaulding/django-gcframe/tarball/v%s' % get_version(),
-    long_description = read('README.rst'),
+    long_description = get_long_desc(),
     packages = [
         'gcframe',
         'gcframe.tests',

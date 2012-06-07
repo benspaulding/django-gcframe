@@ -6,7 +6,7 @@
 
 .. |Build status| image::
    https://secure.travis-ci.org/benspaulding/django-gcframe.png
-.. _Build status: http://travis-ci.org/benspaulding/django-dcframe
+.. _Build status: http://travis-ci.org/benspaulding/django-gcframe
 
 Django utilities for working with Google Chrome Frame.
 

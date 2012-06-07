@@ -35,7 +35,7 @@ Tests
 
 .. |Build status| image::
    https://secure.travis-ci.org/benspaulding/django-gcframe.png
-.. _Build status: http://travis-ci.org/benspaulding/django-dcframe
+.. _Build status: http://travis-ci.org/benspaulding/django-gcframe
 
 ``gcframe`` has a decent test suite, which can and will improve in time.
 

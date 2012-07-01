@@ -22,7 +22,6 @@ class GCFrameTestCase(TestCase):
         if self.gcframe_middleware not in settings.MIDDLEWARE_CLASSES:
             # TODO: Once it is determined if order of this middleware matters,
             # adjust this bit accordingly.
-            # TODO: Account for the case where ``MIDDLEWARE_CLASSES`` is a list.
             settings.MIDDLEWARE_CLASSES += (self.gcframe_middleware,)
 
     def tearDown(self):

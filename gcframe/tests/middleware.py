@@ -49,3 +49,11 @@ class MiddlewareTestCase(GCFrameTestCase):
     def test_response_exempted(self):
         response = self.client.get(reverse('gcframe-test-exempt'))
         self.assertFalse(response.has_header('X-UA-Compatible'))
+
+    def test_compat_mode(self):
+        response = self.client.get(reverse('gcframe-test-normal'))
+        self.assertTrue(response['X-UA-Compatible'].startswith('IE=Edge,'))
+
+    def test_activation_method(self):
+        response = self.client.get(reverse('gcframe-test-normal'))
+        self.assertTrue(response['X-UA-Compatible'].endswith('chrome=1'))

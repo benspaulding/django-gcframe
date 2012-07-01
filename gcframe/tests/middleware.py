@@ -5,8 +5,6 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 
-from gcframe.middleware import GoogleChromeFrameIEMiddleware
-
 
 class GCFrameTestCase(TestCase):
     """A concrete and subclass-able test case."""

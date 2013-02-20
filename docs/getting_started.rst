@@ -32,8 +32,7 @@ compatibility modes can be found on MSDN_.
 Requirements
 ------------
 
-``django-gcframe`` requires Python 2.5 or newer and a functional installation
-of Django 1.2.7 or newer.
+``django-gcframe`` requires Python 2.6 or newer and Django 1.3 or newer.
 
 
 Installation & Usage

@@ -16,6 +16,8 @@ conditionally activates Google Chrome Frame when installed on Microsoft
 Internet Explorer, and conditionally enables a compatibility mode when GCF is
 not activated.
 
+This package requires Python 2.6 or newer and Django 1.3 or later.
+
 Refer to the documentation_ for further information.
 
 .. _documentation: http://readthedocs.org/docs/django-gcframe/

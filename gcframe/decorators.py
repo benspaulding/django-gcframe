@@ -27,8 +27,8 @@ def gcframe(compat_mode=IE_COMPATIBILITY_MODE, act_method=IE_ACTIVATION_METHOD):
 
     """
 
-    # NOTE: This relies on untested, undocumented functions in Django. (As
-    # of 1.2.7.)
+    # NOTE: This relies on untested, undocumented functions in Django. (At
+    # least that is their state as of of Django 1.3.)
     return decorator_from_middleware_with_args(GoogleChromeFrameIEMiddleware)(compat_mode=compat_mode, act_method=act_method)
 
 

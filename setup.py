@@ -31,7 +31,7 @@ setup(
     author='Ben Spaulding',
     author_email='ben@benspaulding.us',
     license='BSD',
-    download_url='https://github.com/benspaulding/django-gcframe/tarball/v%s' % get_version(),
+    download_url='https://github.com/benspaulding/django-gcframe/tarball/v{0}'.format(get_version()),
     long_description = get_long_desc(),
     packages = [
         'gcframe',

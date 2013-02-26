@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 from django.conf import settings
 from django.core.urlresolvers import reverse
 
-from gcframe.decorators import gcframe, gcframe_exempt
-from gcframe.tests.middleware import GCFrameTestCase
+from ..decorators import gcframe, gcframe_exempt
+from .middleware import GCFrameTestCase
 
 
 class DecoratorTestCase(GCFrameTestCase):

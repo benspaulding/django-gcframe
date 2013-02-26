@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 
 from django.http import HttpResponse
 
-from gcframe.decorators import gcframe, gcframe_exempt
+from ..decorators import gcframe, gcframe_exempt
 
 
 def normal(request):

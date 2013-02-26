@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 
 from django.conf.urls.defaults import *
 
-from gcframe.tests.views import normal, framed, exempt
+from .views import normal, framed, exempt
 
 
 urlpatterns = patterns('',

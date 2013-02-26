@@ -7,8 +7,8 @@ from functools import wraps
 from django.utils.decorators import available_attrs
 from django.utils.decorators import decorator_from_middleware_with_args
 
-from gcframe.middleware import GoogleChromeFrameIEMiddleware
-from gcframe.settings import IE_COMPATIBILITY_MODE, IE_ACTIVATION_METHOD
+from .middleware import GoogleChromeFrameIEMiddleware
+from .settings import IE_COMPATIBILITY_MODE, IE_ACTIVATION_METHOD
 
 
 def gcframe(compat_mode=IE_COMPATIBILITY_MODE, act_method=IE_ACTIVATION_METHOD):

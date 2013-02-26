@@ -2,7 +2,7 @@
 
 from __future__ import unicode_literals
 
-from gcframe.settings import IE_COMPATIBILITY_MODE, IE_ACTIVATION_METHOD
+from .settings import IE_COMPATIBILITY_MODE, IE_ACTIVATION_METHOD
 
 
 class GoogleChromeFrameIEMiddleware(object):

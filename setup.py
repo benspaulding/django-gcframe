@@ -14,11 +14,11 @@ def get_long_desc():
 
 # Function borrowed from carljm.
 def get_version():
-    fh = open(os.path.join(here, "gcframe", "__init__.py"))
+    fh = open(os.path.join(here, 'gcframe', '__init__.py'))
     try:
         for line in fh.readlines():
-            if line.startswith("__version__ ="):
-                return line.split("=")[1].strip().strip("'")
+            if line.startswith('__version__ ='):
+                return line.split('=')[1].strip().strip("'")
     finally:
         fh.close()
 
@@ -32,8 +32,8 @@ setup(
     author_email='ben@benspaulding.us',
     license='BSD',
     download_url='https://github.com/benspaulding/django-gcframe/tarball/v{0}'.format(get_version()),
-    long_description = get_long_desc(),
-    packages = [
+    long_description=get_long_desc(),
+    packages=[
         'gcframe',
         'gcframe.tests',
     ],

@@ -5,7 +5,8 @@ from __future__ import unicode_literals
 from django.conf import settings
 from django.core.urlresolvers import reverse
 
-from ..decorators import gcframe, gcframe_exempt
+# Must use absolute import here so Django 1.3 does not choke.
+from gcframe.decorators import gcframe, gcframe_exempt
 from .middleware import GCFrameTestCase
 
 

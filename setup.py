@@ -7,8 +7,10 @@ from distutils.core import setup
 
 here = os.path.dirname(__file__)
 
+
 def get_long_desc():
     return open(os.path.join(here, 'README.rst')).read()
+
 
 # Function borrowed from carljm.
 def get_version():
@@ -19,6 +21,7 @@ def get_version():
                 return line.split("=")[1].strip().strip("'")
     finally:
         fh.close()
+
 
 setup(
     name='django-gcframe',

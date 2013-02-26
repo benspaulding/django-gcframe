@@ -50,7 +50,7 @@ class GoogleChromeFrameIEMiddleware(object):
             # they want it. (They do by default.) Note that this pair
             # must be first in the content. See
             # http://www.chromium.org/developers/how-tos/chrome-frame-getting-started
-            if not self.compat_mode == None:
+            if self.compat_mode is not None:
                 content = 'IE={0},{1}'.format(self.compat_mode, content)
 
             response['X-UA-Compatible'] = content

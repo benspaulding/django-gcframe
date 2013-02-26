@@ -2,6 +2,8 @@
 
 """ Simple views for use in testing the gcframe app. """
 
+from __future__ import unicode_literals
+
 from django.http import HttpResponse
 
 from gcframe.decorators import gcframe, gcframe_exempt

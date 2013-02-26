@@ -2,6 +2,8 @@
 
 """ Simple urls for use in testing the gcframe app. """
 
+from __future__ import unicode_literals
+
 from django.conf.urls.defaults import *
 
 from gcframe.tests.views import normal, framed, exempt

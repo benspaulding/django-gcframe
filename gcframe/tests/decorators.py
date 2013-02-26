@@ -44,4 +44,4 @@ class DecoratorSansGCFrameTestCase(DecoratorTestCase):
     def test_mware_classes(self):
         # A bit of a meta-test, but for sanity's sake I want to be sure that
         # the middleware is not installed.
-        self.failIf(self.gcframe_middleware in settings.MIDDLEWARE_CLASSES)
+        self.assertNotIn(self.gcframe_middleware, settings.MIDDLEWARE_CLASSES)

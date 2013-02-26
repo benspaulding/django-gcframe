@@ -30,7 +30,7 @@ class GCFrameTestCase(TestCase):
     def test_mware_classes(self):
         # A bit of a meta-test, but for sanity's sake I want to be sure that
         # the class has been added.
-        self.failUnless(self.gcframe_middleware in settings.MIDDLEWARE_CLASSES)
+        self.assertIn(self.gcframe_middleware, settings.MIDDLEWARE_CLASSES)
 
 
 class MiddlewareTestCase(GCFrameTestCase):

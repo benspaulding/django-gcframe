@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from gcframe.tests.decorators import *
-from gcframe.tests.middleware import *
-from gcframe.tests.settings import *
+from __future__ import unicode_literals
+
+from .decorators import *
+from .middleware import *
+from .settings import *

@@ -2,9 +2,15 @@
 
 """ Simple urls for use in testing the gcframe app. """
 
-from django.conf.urls.defaults import *
+from __future__ import unicode_literals
 
-from gcframe.tests.views import normal, framed, exempt
+try:
+    from django.conf.urls import patterns, url
+except ImportError:  # Django 1.3
+    from django.conf.urls.defaults import patterns, url
+
+from .views import normal, framed, exempt
+
 
 urlpatterns = patterns('',
     url(r'normal/$', normal, name='gcframe-test-normal'),

@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
+
 from django.conf import settings
 from django.core.urlresolvers import reverse
 
+# Must use absolute import here so Django 1.3 does not choke.
 from gcframe.decorators import gcframe, gcframe_exempt
-from gcframe.tests.middleware import GCFrameTestCase
+from .middleware import GCFrameTestCase
 
 
 class DecoratorTestCase(GCFrameTestCase):
@@ -42,4 +45,4 @@ class DecoratorSansGCFrameTestCase(DecoratorTestCase):
     def test_mware_classes(self):
         # A bit of a meta-test, but for sanity's sake I want to be sure that
         # the middleware is not installed.
-        self.failIf(self.gcframe_middleware in settings.MIDDLEWARE_CLASSES)
+        self.assertNotIn(self.gcframe_middleware, settings.MIDDLEWARE_CLASSES)

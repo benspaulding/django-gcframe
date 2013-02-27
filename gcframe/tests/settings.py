@@ -2,6 +2,9 @@
 
 """Settings for running app tests when not part of another project."""
 
+from __future__ import unicode_literals
+
+
 # Requred by Django, though we don't actually use the database.
 DATABASES = {
     'default': {

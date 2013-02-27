@@ -10,6 +10,9 @@ See the documentation for further details.
 
 """
 
+from __future__ import unicode_literals
+
+
 # TODO: Determine if we even need to account for a lack of settings module, and
 # remove this try/except if necessary.
 try:

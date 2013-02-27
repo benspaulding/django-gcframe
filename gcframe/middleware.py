@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from gcframe.settings import IE_COMPATIBILITY_MODE, IE_ACTIVATION_METHOD
+from __future__ import unicode_literals
+
+from .settings import IE_COMPATIBILITY_MODE, IE_ACTIVATION_METHOD
 
 
 class GoogleChromeFrameIEMiddleware(object):
@@ -42,14 +44,14 @@ class GoogleChromeFrameIEMiddleware(object):
         and not response.has_header('X-UA-Compatible'):
 
             # At this point we know they are activating GCF.
-            content = 'chrome=%s' % self.act_method
+            content = 'chrome={0}'.format(self.act_method)
 
             # Now prepend the compatibility mode parameter/value pair if
             # they want it. (They do by default.) Note that this pair
             # must be first in the content. See
             # http://www.chromium.org/developers/how-tos/chrome-frame-getting-started
-            if not self.compat_mode == None:
-                content = 'IE=%s,%s' % (self.compat_mode, content)
+            if self.compat_mode is not None:
+                content = 'IE={0},{1}'.format(self.compat_mode, content)
 
             response['X-UA-Compatible'] = content
 

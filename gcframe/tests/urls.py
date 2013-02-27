@@ -4,9 +4,10 @@
 
 from __future__ import unicode_literals
 
-# The defaults module is deprecated in Django 1.5, but necessary to
-# support Django 1.3. drop ``.defaults`` when dropping 1.3 support.
-from django.conf.urls.defaults import patterns, url
+try:
+    from django.conf.urls import patterns, url
+except ImportError:  # Django 1.3
+    from django.conf.urls.defaults import patterns, url
 
 from .views import normal, framed, exempt
 
